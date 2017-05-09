@@ -1,0 +1,7 @@
+2016-02-10.14-50-03 mv assignment2/* .
+2016-02-10.14-50-06 rm -rf assignment2
+2016-02-10.14-51-31 rm -rf *
+2016-02-10.14-51-38 mv assignment2/* .
+2016-02-10.14-51-41 rm -rf assignment2
+2016-02-10.14-51-42 clc
+2016-02-12.16-30-51 cp ~/Teaching/deep_learning/practicals/practicals/assignment2-solutions/define_testing.lua .

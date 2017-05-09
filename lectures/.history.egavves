@@ -1,0 +1,35 @@
+2016-02-23.13-26-18 mv lecture6-group_equivariant_convnets.pdf lecture7-group_equivariant_convnets.pdf 
+2016-03-07.09-15-34 cp ~/Dropbox/Deep\ Learning\ Course/lecture9.pdf 
+2016-03-07.09-15-36 cp ~/Dropbox/Deep\ Learning\ Course/lecture9.pdf .
+2016-03-07.09-15-38 cp ~/Dropbox/Deep\ Learning\ Course/lecture10.pdf .
+2016-03-07.09-15-44 cp ~/Dropbox/Deep\ Learning\ Course/lecture10.pdf .
+2016-03-07.09-16-10 rm Paper\ 247.pdf 
+2016-03-07.09-16-12 clc
+2016-03-07.09-24-51 pdfunite lecture10-extended.pdf lecture10.pdf lectureRecursiveNN.pdf 
+2016-03-07.09-25-06 pdfunite lecture10.pdf lectureRecursiveNN.pdf lecture10-extended.pdf
+2016-03-07.09-25-18 okular lecture10-extended.pdf 
+2016-03-07.09-25-38 okular lecture10-extended.pdf 
+2016-03-07.09-25-39 okular lecture10-extended.pdf 
+2016-03-07.09-25-39 clc
+2016-03-22.16-04-08 clc
+2016-11-01.15-34-27 ls Feb2016/
+2016-11-01.15-34-39 mv Feb2016/ feb2016
+2016-11-01.15-34-44 rm feb2016/
+2016-11-01.15-34-47 rm feb2016/*
+2016-11-01.15-34-47 clc
+2016-11-01.15-34-49 ls feb2016/
+2016-11-01.15-35-37 rm *.pptx
+2016-11-01.15-35-40 ls feb2016/
+2016-11-01.15-36-17 cp ~/Dropbox-backup/Deep\ Learning\ Course/*.pdf feb2016/
+2016-11-01.15-40-08 git rm *.pptx
+2016-11-01.15-40-15 git rm -r Feb2016/
+2016-11-01.15-40-23 git rm -r feb2016/*.pptx
+2016-11-16.14-46-44 rm lecture4\ \(1\).pdf 
+2016-11-16.14-46-46 clc
+2016-11-25.11-10-59 git add lecture8.pdf 
+2016-12-14.17-19-58 pdfunite TalkGCN.pdf videolstm-zhenyang.pdf SINT_deeplearningcourse.pdf lecture10.pdf
+2016-12-14.17-20-14 okular lecture10.pdf 
+2016-12-14.17-20-32 git add lecture10.pdf 
+2016-12-14.17-20-37 git add lecture9.pdf 
+2016-12-14.17-20-40 git add lecture11-jasonweston.pdf 
+2016-12-14.17-40-35 pdfunite TalkGCN.pdf videolstm-zhenyang.pdf SINT_deeplearningcourse.pdf RIM_dlcourse_2016.pdf lecture10.pdf

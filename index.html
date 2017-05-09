@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UvA Deep Learning Course</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86672135-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">UvA Deep Learning Course</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#news">News</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#lectures">Lectures</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#old-lectures">Past lectures</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#hot-questions">Hot Questions</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#practicals">Practicals</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#course-links">Course links</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#other-links">Readings &#38; other links</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>UVA Deep Learning Course</h1>
+                <hr>
+                <p>MSc in Artificial Intelligence for the University of Amsterdam.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">About</h2>
+                    <hr class="light">
+                    <p class="text-faded" style="text-align:justify">Deep learning is primarily a study of multi-layered neural networks, spanning over a great range of model architectures. This course is taught in the MSc program in Artificial Intelligence of the University of Amsterdam. In this course we study the theory of deep learning, namely of modern, multi-layered neural networks trained on big data. The course focuses particularly on computer vision and language modelling, which are perhaps two of the most recognizable and impressive applications of the deep learning theory. The course is taught by Assistant Professor <a href="http://www.egavves.com" style="color: white;">Efstratios Gavves</a>, Kirill Gavrilyuk, Berkay Kicanaoglu, and <a href="https://patrickputzky.wordpress.com/home/" style="color: white;">Patrick Putzky</a>.</p>
+                    <img class="img-circle" src="images/efstratios-gavves.jpg">
+                    <img class="img-circle" src="images/kirill.jpg" hspace="5">
+                    <img class="img-circle" src="images/berkay.jpg" hspace="5">
+                    <img class="img-circle" src="images/patrick.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark" id="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">News</h2>
+                    <hr class="light">
+                    <div align="left">
+
+                    <ul class="text-faded">
+                    
+                    <li>The Practical 3 is released. Check <a href="#practical_3">Practical 3.</a></li>
+
+                    <li>The Practical 2 is released. Check <a href="#practical_2">Practical 2.</a></li>
+
+                    <li>The video links for the recordings of lectures 3, 4 are now available.</li>
+
+                    <li>The <a href="#lecture_4">slides</a> from Lecture 4 are uploaded.</li>
+
+                    <li>The <a href="#lecture_15">slides</a> from the SURF SARA presentation are uploaded.</li>
+
+                    <li>The papers for the student presentatiins are uploaded, check <a href="#practical_6">Practical 6.</a></li>
+
+                    </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="lectures">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Lectures</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture1.pdf" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/970368a151ed4b0caff9490197a1e8571d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 1</h3>
+                        <p class="text-muted">Introduction to Deep Learning and Neural Networks</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture2.pdf" class='social' target="_blank">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 2</h3>
+                        <p class="text-muted">Learning with neural networks</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture3.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        </a>
+            			<a href="http://webcolleges.uva.nl/Mediasite/Play/6281cacc696c49beae64e7f1e3ffa3dc1d" class='social' target="_blank">
+            			<i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 3</h3>
+                        <p class="text-muted">Deeper into Deep Learning<br>and Optimizations</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center" id="lecture_4">
+                    <div class="service-box">
+                        <a href="lectures/lecture4.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/0eaea1ea961240159c99e83fed87188c1d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 4</h3>
+                        <p class="text-muted">Convolutional Neural Networks<br>for Computer Vision</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture5.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/ce519bc23bb24c9fb39e92c465b18a861d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 5</h3>
+                        <p class="text-muted">Understanding ConvNets<br>and Knowledge Transfer</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture6.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/da615871377443748ed43f580774b1cb1d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 6</h3>
+                        <p class="text-muted">Structured Prediction<br>with Convnets</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture7-christofmonz.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        </a>
+			            <a href="http://webcolleges.uva.nl/Mediasite/Play/d7bd4da690b84100a3d58346d1e7203b1d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 7</h3>
+                        <p class="text-muted">Language Models and<br>Word Embeddings</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture8.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/00584cefc05647a3a47113c749dccac21d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 8</h3>
+                        <p class="text-muted">Recurrent Neural Networks<br> &nbsp;&nbsp;&nbsp; </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture9.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/09e8020936a941b991c63be96ff57b1a1d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 9</h3>
+                        <p class="text-muted">Unsupervised, Generative<br>and Adversarial Networks</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture10.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/1ff098b528c04747b0a8159fd35b72291d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 10</h3>
+                        <p class="text-muted">Invited talks by T. Kipf<br>R. Tao, Z. Li, P. Putzky</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="lectures/lecture11-jasonweston.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        </a>
+                        <a href="http://webcolleges.uva.nl/Mediasite/Play/c21ae03527814ae0b332e4f346cd56fb1d" class='social' target="_blank">
+                        <i class="fa fa-4x fa fa-video-camera wow bounceIn text-primary"></i>
+                        </a>
+                        <h3>Lecture 11</h3>
+                        <p class="text-muted">Memory Networks for<br>Language Understanding</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="javascript:void(0)">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        </a>
+                        <h3><strike>Lecture 12</strike></h3>
+                        <p class="text-muted">To be announced,<br>stay in touch</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="javascript:void(0)">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        </a>
+                        <h3><strike>Lecture 13</strike></h3>
+                        <p class="text-muted">To be announced,<br>stay in touch</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <a href="javascript:void(0)">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        </a>
+                        <h3><strike>Lecture 14</strike></h3>
+                        <p class="text-muted">To be announced,<br>stay in touch</p>
+                    </div>
+                </div>
+		<div class="col-lg-3 col-md-6 text-center" id="lecture_15">
+                    <div class="service-box">
+                        <a href="lectures/surfsara-slides.pdf">
+                        <i class="fa fa-4x fa-file-powerpoint-o wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        </a>
+                        <h3>Lecture 15</h3>
+                        <p class="text-muted">SURF SARA Tutorial,<br>HPC Deep Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark" id="old-lectures">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>If you are interested in older versions of the lectures, you can find them below.</h2>
+
+                <a href="lectures-feb2016.html#" class="btn btn-default btn-xl wow tada">UVADLC Feb 2016</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="hot-questions">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Hot Questions</h2>
+                    <hr class="light">
+                    <p class="text-faded" style="text-align:justify">
+                    During the course several interesting questions pop up. Instead of having them lost during the lectures, we put here all the questions could be of interest to more people, inside and outside the University of Amsterdam. Although not all questions are going to be immediately answered because of time constraints, the goal is to have the answers online as soon as possible. If you have an interesting question for which you would like an answer, you can always <a href="mailto:egavves@uva.nl" style="color: white;">email us</a>.
+                    </p>
+
+                    <a href="javascript:void(0)" class="btn btn-default btn-xl wow tada">Hot questions</a>
+                    <!-- <a href="interesting-questions.html#" class="btn btn-default btn-xl wow tada">Interesting questions</a> -->
+                    
+<!--                     <p class="text-faded" style="text-align:justify">
+                    The table of content for these questions is the following:
+
+                    <ul class="text-faded">
+
+                    <li> </li>
+
+                    </ul> -->
+
+                    </div>
+                    </p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+    <section id="practicals">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Practicals</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="https://github.com/uvadlc/uvadlc_practicals_2016/tree/master/practical_0" class="portfolio-box">
+                        <img src="images/0-practical.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 0
+                                </div>
+                                <div class="project-name">
+                                    Deep Learning in a Cluster
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="https://github.com/uvadlc/uvadlc_practicals_2016/tree/master/practical_1" class="portfolio-box">
+                        <img src="images/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 1
+                                </div>
+                                <div class="project-name">
+                                    Basics of Neural Networks
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6" id="practical_2">
+                    <a href="https://github.com/uvadlc/uvadlc_practicals_2016/tree/master/practical_2" class="portfolio-box">
+                        <img src="images/2_new.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 2
+                                </div>
+                                <div class="project-name">
+				    Learning with Deep Learning &amp;<br>
+                                    Introduction to TensorFlow
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6" id="practical_3">
+                    <a href="https://github.com/uvadlc/uvadlc_practicals_2016/tree/master/practical_3" class="portfolio-box">
+                        <img src="images/3-practical.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 3
+                                </div>
+                                <div class="project-name">
+                                    Convolutional Neural Networks
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="javascript:void(0)" class="portfolio-box">
+                        <img src="images/image_placeholder.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 4
+                                </div>
+                                <div class="project-name">
+                                    To be announced
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="javascript:void(0)" class="portfolio-box">
+                        <img src="images/image_placeholder.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 5
+                                </div>
+                                <div class="project-name">
+                                    To be announced
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6" id="practical_6">
+                    <a href="https://github.com/uvadlc/uvadlc_practicals_2016/tree/master/practical_6" class="portfolio-box">
+                        <img src="images/6-practical.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Practical 6
+                                </div>
+                                <div class="project-name">
+                                    Paper Presentations
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary" id="course-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Course links</h2>
+                    <hr class="light">
+                    <p class="text-faded" style="text-align:justify">Some useful links for the course are the following:
+
+                    <p class="text-faded">
+                    <div align="left">
+
+                    <ul class="text-faded">
+
+                    <li> <a href="https://piazza.com/class/iuxuidh437j3ed?cid=6" style="color: white;">Piazza website</a>, wherere you can discuss with other students, see notifications and get in contact with your fellow classmates and the instructors.</li>
+
+                    <li> <a href="https://github.com/uvadlc/uvadlc_practicals_2016" style="color: white;"> Practicals repo </a>, where you can download the practicals assignments for the course. As the course has freshly started, not all material is already there. Please download the next assignment whenever indicated by your instructors. </li>
+
+                    <li> And of course, this is <a href="https://github.com/uvadlc/uvadlc.github.io" style="color: white;"> the website itself</a> </li>
+
+                    </ul>
+
+                    </div>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section class="bg-dark" id="other-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Readings &#38; other links</h2>
+                    <hr class="light">
+                    <p class="text-faded" style="text-align:justify">These are some other materials related to this course, machine learning and applied math in general. The first group is suggested readings that could help you with this course. The second group refers to links with similar courses on Deep Learning. The material taught in the UvA Deep Learning Course are partly inspired by the sources below. These lists are (hopefully) going to be updated regularly.
+                    </p>
+
+                    <h3 class="section-heading">Readings</h3>
+                    <p class="text-faded">
+                    <div align="left">
+
+                    <ul class="text-faded">
+
+                    <li> <a href="http://www.deeplearningbook.org/" style="color: white;">Deep Learning</a>, a book written by I. Goodfellow, Y. Bengio and A. Courville.</li>
+
+                    </ul>
+
+                    </div>
+                    </p>
+
+                    <h3 class="section-heading">Similar courses</h3>
+
+                    <p class="text-faded">
+                    <div align="left">
+
+                    <ul class="text-faded">
+
+                    <li> <a href="http://cilvr.cs.nyu.edu/doku.php?id=deeplearning:slides:start" style="color: white;">Deep Learning</a>, a course organized by Y. LeCun at the New York University.</li>
+
+                    <li> <a href="http://cs224d.stanford.edu/syllabus.html"
+                     style="color: white;">Deep Learning for Natural Language Processing</a>, a course organized by R. Socher at Stanford.</li>
+
+                    <li> <a href="http://vision.stanford.edu/teaching/cs231n/syllabus.html" style="color: white;">Convolutional Neural Networks for Visual Recognition</a>, a course organized by A. Karpathy and Fei-Fei Li at Stanford.</li>
+
+                    <li> <a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" style="color: white;">Machine Learning</a>, a course organized by N. de Freitas at Oxford.</li>
+
+                    <li> <a href="https://www.coursera.org/course/neuralnets" style="color: white;">Neural Networks for Machine Learning</a>, a course organized by G. Hinton at Coursera.</li>
+
+                    <li> <a href="http://info.usherbrooke.ca/hlarochelle/neural_networks/content.html" style="color: white;">Neural Networks</a>, a course organized by H. Larochelle at Université de Sherbrooke.</li>
+
+                    <li> <a href="https://www.udacity.com/course/deep-learning--ud730" style="color: white;">Deep Learning</a>, a course organized by Google at Udacity.</li>
+
+                    <li> <a href="https://github.com/joanbruna/stat212b" style="color: white;">Topics Course on Deep Learning</a>, a course organized by Joan Bruna at the Statistics Department of UC Berkeley.</li>
+
+                    </ul>
+
+                    </div>
+                    </p>
+
+                    <!-- <li> <a href='https://www.coursera.org/course/neuralnets style="color: white;"'>Neural Networks for Machine Learning</a>, a course organized by G. Hinton at Coursera.</li>
+
+                    <li> And of course, this is <a href='http://uvadlc.github.io style="color: white;"'> the website itself</a> </li> -->
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Contact us!</h2>
+                    <hr class="primary">
+                    <p class="running-text" style="text-align:justify">
+                    If you have any questions or recommendations for the website or the course, you can always drop us a line!
+                    The knowledge should be free, so feel also free to use any of the material provided here (but please be so kind to cite us).
+                    In case you are a course instuctor and you want the solutions, please send us an email.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-map-marker fa-3x wow bounceIn"></i>
+                    <p><a href="https://goo.gl/maps/HzB8CMdkTDA2">Room C3.229, Science Park 904 1098 XH, Amsterdam, The Netherlands</a></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:uva.deeplearning@gmail.com@your-domain.com">uva.deeplearning@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+      </div>
+    </div>
+
+</body>
+
+</html>
