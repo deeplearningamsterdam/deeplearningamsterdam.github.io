@@ -1,0 +1,22 @@
+2017-05-09.15-40-26 git init 
+2017-05-09.15-40-44 git add ../deeplearningamsterdam.github.io-backup/index.html 
+2017-05-09.15-41-11 cp -r ../deeplearningamsterdam.github.io-backup/css/ .
+2017-05-09.15-41-15 cp -r ../deeplearningamsterdam.github.io-backup/font* .
+2017-05-09.15-41-24 cp -r ../deeplearningamsterdam.github.io-backup/*.html
+2017-05-09.15-41-30 cp -r ../deeplearningamsterdam.github.io-backup/icons .
+2017-05-09.15-41-35 cp -r ../deeplearningamsterdam.github.io-backup/images/ .
+2017-05-09.15-41-38 cp -r ../deeplearningamsterdam.github.io-backup/js .
+2017-05-09.15-41-42 cp -r ../deeplearningamsterdam.github.io-backup/lectures .
+2017-05-09.15-41-46 cp -r ../deeplearningamsterdam.github.io-backup/less .
+2017-05-09.15-41-50 cp -r ../deeplearningamsterdam.github.io-backup/manifest.json .
+2017-05-09.15-41-57 cp -r ../deeplearningamsterdam.github.io-backup/other_sources/ .
+2017-05-09.15-42-01 cp -r ../deeplearningamsterdam.github.io-backup/practicals/ .
+2017-05-09.15-42-16 cp -r ../deeplearningamsterdam.github.io-backup/*.html .
+2017-05-09.15-42-29 git add *
+2017-05-09.15-42-43 git commit -m 'copied content from uvadlc'
+2017-05-09.15-42-45 git pull
+2017-05-09.15-42-49 git push -u origin master
+2017-05-09.15-42-59 git remote add origin https://github.com/deeplearningamsterdam/deeplearningamsterdam.github.io.git
+2017-05-09.15-43-49 git push -u origin master
+2017-10-31.16-21-06 git pull
+2017-10-31.16-37-22 google-chrome index.html 
